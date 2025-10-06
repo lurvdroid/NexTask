@@ -1,1 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>NexTask App</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="app">
+<header>
+<h1>NexTask</h1>
+<div class="header-actions">
+<input id="search" placeholder="Search tasks..." />
+<select id="filter">
+<option value="all">All</option>
+<option value="active">Active</option>
+<option value="completed">Completed</option>
+<option value="today">Due Today</option>
+</select>
+</div>
+</header>
 
+
+<main>
+<section class="add">
+<input id="title" placeholder="Task title" />
+<input id="due" type="date" />
+<select id="priority">
+<option value="low">Low</option>
+<option value="medium" selected>Medium</option>
+<option value="high">High</option>
+</select>
+<button id="addBtn">Add Task</button>
+</section>
+
+
+<section class="controls">
+<button id="clearCompleted">Clear completed</button>
+<button id="export">Export JSON</button>
+<input id="importFile" type="file" accept="application/json" />
+</section>
+
+
+<ul id="list" class="task-list"></ul>
+</main>
+
+
+<footer>
+<small>Saved locally • Deployable to GitHub Pages / Vercel</small>
+</footer>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
